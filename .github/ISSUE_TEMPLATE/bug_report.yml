@@ -1,0 +1,74 @@
+name: Bug report
+description: Something in Aivie Content does not work as described in the documentation.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please check [Troubleshooting](https://docs.aivie.nl/troubleshooting) and the [existing issues](https://github.com/ipsis-packages/aivie-issues/issues?q=is%3Aissue) first.
+
+        **Never post secrets:** no API keys, licence keys, connection strings or `appsettings.json` contents.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead? Include the exact message, if there was one.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The steps in the backoffice that lead to the problem.
+      placeholder: |
+        1. Go to Aivie - Content > ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+  - type: input
+    id: aivie-version
+    attributes:
+      label: Aivie Content version
+      placeholder: "17.0.0"
+    validations:
+      required: true
+  - type: input
+    id: umbraco-version
+    attributes:
+      label: Umbraco version
+      placeholder: "17.5.0"
+    validations:
+      required: true
+  - type: input
+    id: dotnet-version
+    attributes:
+      label: .NET version
+      placeholder: "10.0"
+  - type: dropdown
+    id: database
+    attributes:
+      label: Database
+      options:
+        - SQL Server / Azure SQL
+        - SQLite
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: ai-provider
+    attributes:
+      label: AI provider and model
+      description: The provider and model of the Umbraco AI connection Aivie uses, if relevant.
+      placeholder: "OpenAI, gpt-..."
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log lines
+      description: Relevant lines from the Umbraco log (Settings > Log Viewer). Remove any keys or personal data first.
+      render: text
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, browser, other packages that might be involved.

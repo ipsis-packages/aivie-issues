@@ -1,0 +1,30 @@
+name: Feature request
+description: An idea to make Aivie Content better.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search the [existing issues](https://github.com/ipsis-packages/aivie-issues/issues?q=is%3Aissue) first. If the idea is already there, add a 👍 or a comment about your situation.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want to do?
+      description: The situation or task you run into. Describe the problem before the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: How you would like Aivie Content to help with it.
+  - type: textarea
+    id: now
+    attributes:
+      label: How do you do it now?
+      description: Any workaround you use today.
+  - type: input
+    id: aivie-version
+    attributes:
+      label: Aivie Content version
+      placeholder: "17.0.0"
